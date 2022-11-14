@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pristatymo informacija</title>
+    <style>
+        .border {
+            border:2px solid rgba(228, 227, 227, 0.993);
+            height:200px;
+            width:300px;
+            text-align: center;
+            background-color: white;
+            margin: 35px;
+            padding: 2px 2px;
+        }
+        .border img {
+            height:40px;
+            width:150px;
+        }
+        .pagrindas {
+            background-color: rgb(244, 244, 244);
+            width:70%;
+            font-family: Calibri;
+            margin-left: 250px;
+            margin-top: 100px;
+            border: 2px solid rgba(228, 227, 227, 0.993);
+        }
+        .kompanijos {
+            display: inline-flex;
+            margin:10px;
+        }
+        h3 {
+            margin-left: 35px;
+        }
+        .margin {
+            margin-left: 35px;
+        }
+        select {
+            width:500px;
+            height:50px;
+        }
+        .pristatymo-vieta {
+            display: inline-flex;
+        }
+        .margin input {
+            width:492px;
+            height:45px;
+        }
+        .asmenine-info {
+            display: inline-flex;
+        }
+        .tel-nr {
+            margin-bottom:50px;
+        }
+        hr {
+            text-align: center;
+            width:1055px;
+        }
+        hr { 
+            background-color: rgba(228, 227, 227, 0.993); height: 1px; border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="pagrindas">
+        <div class="turinys">
+            <h3 class="head"><br />Pristatymas į paštomatus</h3>
+            <div>
+                <hr>
+            </div>
+            <div class="kompanijos">
+                <div class="lpexpress border">
+                    <br />
+                    <input type="radio" name="choose"><br />
+                    <img src="logotipai/lp-express.png" alt="LP EXPRESS logotipas">
+                    <p><b>Atsiėmimas LP EXPRESS paštomate</b></p>
+                    <p>2-4 darbo dienos</p>
+                    <p><b>1,99 €</b></p>
+                </div>
+                <div class="omniva border">
+                    <br />
+                    <input type="radio" name="choose"><br />
+                    <img src="logotipai/omniva-naujas.png" alt="Omniva logotipas">
+                    <p><b>Atsiėmimas Omniva paštomate</b></p>
+                    <p>2-4 darbo dienos</p>
+                    <p><b>1,99 €</b></p>
+                </div>
+                <div class="dpd border">
+                    <br />
+                    <input type="radio" name="choose"><br />
+                    <img src="logotipai/dpd_logo1.png" alt="DPD logotipas">
+                    <p><b>Atsiėmimas DPD paštomate</b></p>
+                    <p>2-4 darbo dienos</p>
+                    <p><b>1,99 €</b></p>
+                </div>
+            </div>
+            <h3>Pasirinkite pristatymo vietą</h3>
+            <div class="pristatymo-vieta">
+                <div class="miestas margin">
+                    <label>Miestas*</label><br />
+                    <select>
+                        <option>Garliava</option>
+                        <option>Rokai</option>
+                        <option>Kaunas</option>
+                        <option>Karmėlava</option>
+                        <option>Rokeliai</option>
+                    </select>
+                </div>
+                <div class="adresas margin" style="margin-left:60px">
+                    <label>Paštomato adresas (paštomatas)*</label><br />
+                    <select>
+                        <option>IKI Garliava (Vytauto g. 67)</option>
+                        <option>Rokai</option>
+                        <option>Kaunas</option>
+                        <option>Karmėlava</option>
+                        <option>Rokeliai</option>
+                    </select>
+                </div>
+            </div>
+            <h3>Pateikite gavėjo duomenis</h3>
+            <div class="asmenine-info">
+                <div class="vardas margin">
+                    <label>Vardas*</label><br />
+                    <input type="text" placeholder="Vardenis">
+                </div>
+                <div class="pavarde margin" style="margin-left:60px">
+                    <label>Pavardė*</label><br />
+                    <input type="text" placeholder="Pavardenis">
+                </div>
+            </div>
+            <div class="tel-nr margin">
+                    <br />
+                    <label>Mobilaus telefono numeris*</label><br />
+                    <input type="tel" placeholder="+37060012345"><br /><br />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
