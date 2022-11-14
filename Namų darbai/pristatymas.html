@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pristatymas</title>
+    <style>
+        img {
+            height:80px;
+            width:100px;
+        }
+        .bendras {
+            font-family: Calibri;
+            background-color: rgb(243, 229, 229);
+            width: 1000px;
+        }
+        .imone {
+        width: 300px;
+        background-color: white;
+        margin: 5px;
+        text-align: center;
+        border: 1px solid rgba(211,211,211,255);
+        }
+        .kurjeriai {
+            margin-left: 30px;
+            display: inline-flex;
+        }
+        .info {
+            float:left;
+            margin-left:35px;
+        }
+        .pastomatas {
+            margin-left: 400px;
+        }
+        h3 {
+            margin-left: 35px;
+        }
+        option {
+            height: 10px;
+            width: 300px;
+        }
+        .pavarde {
+            margin-left:325px;
+        }
+        .numeris {
+            margin-left: 35px;
+            margin-bottom: 20px;
+        }
+        .second option {
+            width:300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bendras">
+        <div class="turinys">
+            <h3>Pristatymas i paštomatus</h3>
+            <div class="kurjeriai">
+                <div class="lp imone">
+                    <br />
+                    <input type="radio" name="pastomatas"><br/>
+                    <img src="logos/lpexpress.png" alt="lpexpress logo" height="100px" width="100px">
+                    <p><b>Atsiėmimas LP EXPRESS paštomate</b></p>
+                    <p>2-4 darbo dienos</p>
+                    <p><b>1,99 €</b></p>
+                </div>
+                <div class="omni imone">
+                    <br />
+                    <input type="radio" name="pastomatas"><br/>
+                    <img src="logos/omniva_logo.jpg" alt="lpexpress logo" height="100px" width="100px">
+                    <p><b>Atsiėmimas Omniva paštomate</b></p>
+                    <p>2-4 darbo dienos</p>
+                    <p><b>1,99 €</b></p>
+                </div>
+                <div class="dpd imone">
+                    <br />
+                    <input type="radio" name="pastomatas"><br/>
+                    <img src="logos/lpexpress.png" alt="lpexpress logo" height="100px" width="100px">
+                    <p><b>Atsiėmimas DPD paštomate</b></p>
+                    <p>2-4 darbo dienos</p>
+                    <p><b>1,99 €</b></p>
+                </div>
+            </div>
+            <h3>Pasrinkite pristatymo vietą</h3>
+            <div class="second info">
+                <label>Miestas*</label><br />
+                <select style="height:50px">
+                    <option>Garliava</option>
+                    <option>Kaunas</option>
+                    <option>Vilnius</option>
+                    <option>Marijampolė</option>
+                    <option>Vilkaviškis</option>
+                </select>
+            </div>
+            <div class="pastomatas info second">
+                <label>Paštomato adresas (paštomatas)*</label><br />
+                <select style="height:50px">
+                    <option>IKI Garliava (Vytauto g. 67)</option>
+                    <option>Bet koks adresas</option>
+                    <option>Bet koks adresas</option>
+                    <option>Bet koks adresas</option>
+                    <option>Bet koks adresas</option>
+                </select>
+            </div>
+            <br /><br /><br /><h3>Pateikite gavėjo duomenis</h3>
+            <div class="info">
+                <label>Vardas*<br /></label>
+                <input type="text" placeholder="Vardenis" style="height:50px;">
+
+            </div>
+            <div class="info pavarde">
+                <label>Pavardė*<br /></label>
+                <input type="text" placeholder="Pavardenis" style="height:50px;" size="50">
+
+            </div>
+        </div>
+        <div class=" numeris">
+            <label><br /><br /><br /><br /><br /><br />Mobilaus telefono numeris*<br /></label>
+            <input type="tel" placeholder="+37060012345" style="height:50px;"size="50"><br /><br />
+        </div>
+    </div>
+</body>
+</html>
