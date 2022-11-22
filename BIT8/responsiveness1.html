@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin 0;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            justify-content: center;
+            display: block;
+            padding: 0 10px;
+        }
+
+        main {
+            display: flex;
+        }
+
+        article {
+            width: 70%;
+        }
+
+        aside {
+            width: 30%;
+        }
+
+        nav ul li {
+            padding 5px 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color:black;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color:black;
+        }
+
+        nav ul li a:visited {
+            text-decoration: none;
+            color:black;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 1000px;
+            margin-bottom: 100px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        label.hamburger-nav {
+            display: none;
+        }
+
+        input.hidden {
+            display: none;
+        }
+
+        @media screen and (max-width:768px) {
+
+            article,
+            aside {
+                width: 100%;
+            }
+
+            main {
+                display: block;
+            }
+
+            #hamburger:checked + ul {
+            display: block;
+        }
+
+            label.hamburger-nav {
+                padding-top: 5px;
+                display: inline-block;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            label.hamburger-nav span {
+                width: 20px;
+                display: block;
+                background-color: black;
+                height: 3px;
+                margin-bottom: 4px;
+            }
+        }
+
+        @media screen and (max-width:375px) {
+            header h1 {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+            header h1 {
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tai yra headeris</h1>
+        <nav>
+            <label for="hamburger" class="hamburger-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <input type="checkbox" id="hamburger" class="hidden">
+            <ul>
+                <li><a href="#">Pirmas</a></li>
+                <li><a href="#">Antras</a></li>
+                <li><a href="#">Trecias</a></li>
+                <li><a href="#">Ketvirtas</a></li>
+                <li><a href="#">Penktas</a></li>
+                <li><a href="#">Sestas</a></li>
+                <li><a href="#">Septintas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <article>
+            <h1>Straipsnio pavadinimas</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem eum eligendi accusamus excepturi, cum
+                reiciendis praesentium distinctio hic dolor sunt, similique error earum eveniet perspiciatis quae
+                repellendus vitae obcaecati officiis! Earum nesciunt ducimus ex quidem dolorem ullam quam, deleniti
+                eveniet eaque deserunt accusamus? Aut quasi maxime, saepe a recusandae labore, vel quibusdam deleniti
+                quaerat repellendus fugit eum perferendis deserunt! Placeat veniam vel molestiae repellat accusantium,
+                fugiat nemo incidunt hic neque voluptatem quis blanditiis quasi amet omnis voluptates aperiam
+                repellendus quod. Repellendus sequi accusantium blanditiis eum in velit, pariatur cum incidunt saepe ut
+                numquam consectetur, quidem facere labore veniam? Minima, unde?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, porro? Provident sunt illo sed?
+                Nesciunt quasi esse deleniti corporis voluptates ut perspiciatis, totam assumenda laborum nam neque ad
+                eveniet itaque dolorem voluptatum? Fuga commodi ducimus, iste soluta consequuntur labore asperiores
+                fugit non tempora eaque, eius culpa ex tempore doloribus expedita repudiandae quaerat omnis officiis
+                natus id placeat nisi recusandae. Alias non debitis dolorum ducimus numquam nostrum ex consequatur quos
+                rem deserunt, recusandae veniam consectetur eum est sed optio, illum fugit ratione doloribus commodi
+                vitae neque. Suscipit, perspiciatis! Exercitationem perferendis blanditiis non? Aliquid, est architecto?
+                Molestias cupiditate praesentium distinctio id dolorem possimus quibusdam beatae inventore ducimus vitae
+                qui sapiente blanditiis hic ipsa dolor nihil incidunt, temporibus quae corrupti reprehenderit rerum
+                fugiat voluptas laudantium architecto? Reiciendis nemo facere illo exercitationem impedit necessitatibus
+                numquam, perspiciatis earum placeat commodi, eveniet aperiam tempore, temporibus enim cum rem nisi
+                similique eaque odit suscipit? Corrupti non distinctio ipsa neque adipisci asperiores perferendis
+                voluptate dolorem eaque optio, eligendi praesentium? Quas modi autem illo laborum sequi ipsa, nihil rem
+                rerum, soluta vero cupiditate ab minima aut! Suscipit numquam esse doloribus cum id nemo quia molestiae
+                temporibus beatae labore, autem alias, dolorem libero ducimus dolorum nostrum veritatis nulla hic
+                reiciendis debitis reprehenderit? Cupiditate fuga odit neque reprehenderit vel! Tempore odit praesentium
+                enim amet magni nesciunt soluta! Delectus earum minima explicabo reprehenderit magnam facilis alias
+                animi, accusantium nesciunt veritatis, labore debitis totam eaque odit facere quae. Autem voluptate
+                officiis ea modi ad et velit, ipsam eum nostrum. Adipisci, quibusdam. Repellat dicta fugit iure magni
+                illum velit ut consequatur, voluptate, suscipit voluptas id, possimus incidunt. Dolorum, blanditiis
+                excepturi, amet assumenda maxime qui voluptate aliquid rerum quae omnis debitis dolor, quis corporis
+                neque quasi harum explicabo perferendis quas iusto obcaecati nisi commodi hic quibusdam. Molestiae vero
+                consequuntur quas laboriosam libero optio molestias possimus!</p>
+
+        </article>
+        <aside>
+            <h2>Naujausi straipsniai</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        Copyrighted GM
+    </footer>
+</body>
+
+</html>

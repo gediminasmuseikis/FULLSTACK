@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxes {
+            background-color: black;
+            padding: 50px;
+            color:white;
+        }
+        .boxes::before,
+        .boxes::after{
+            content: "";
+            display: table;
+            clear:both;
+        }
+        .column {
+            width:50%;
+            height: 300px;
+            float: left;
+        }
+        .flexcolumn {
+            width:50%;
+            height:300px;
+        }
+        .flexboxes {
+            display: flex;
+        }
+        .red {
+            background-color: red;
+        }
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Floating boxes</h1>
+    <div class="boxes">
+        <div class="column red"></div>
+        <div class="column blue"></div>
+    </div>
+    <h1>Flexboxes</h1>
+    <div class=" boxes flexboxes">
+        <div class="flexcolumn red"></div>
+        <div class="flexcolumn blue"></div>
+    </div>
+</body>
+</html>

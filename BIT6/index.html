@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* postition: static standartine (pagal nutylejima) priskiriama pozicija;
+        position: relative Nurodo kad palei sita elementa lygiuojasi visi absolute elementai JO VIDUJE;
+        position: aboslute; Lygiuojamas palei atrimiausia relityvu elementa*/
+        .relative {
+            background-color: black;
+            height: 500px;
+            width: 500px;
+            margin: 0 auto;
+            position: relative;
+            top: 100px;
+        }
+
+        .absolute {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(180, 95, 38);
+            position:absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        h1 {
+            color:white;
+        }
+        .bottom-right {
+            bottom: 0;
+            right: 0;
+            left: unset;
+            top: unset;
+        }
+        .custom-position {
+            top:50px;
+            left:500px;
+            background-color: red;
+        }
+        .block {
+            margin: 8000px auto 0;
+            background-color: black;
+            width: 700px;
+            height: 300px;
+        }
+        .absolute-block {
+            position: aboslute;
+            width:50px;
+            height: 50px;
+            background-color: blue;
+            top:8600px;
+            left:900px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:black;">Statinis turinys</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, assumenda obcaecati repellendus ex enim vel quam natus laboriosam doloremque repudiandae alias quaerat quod velit amet corrupti quisquam beatae ab esse illum eaque. Dignissimos natus perferendis cumque corrupti odit a sunt dolor deserunt, nemo labore voluptatum quidem, qui nulla debitis! Rerum at explicabo illum adipisci voluptatem architecto aliquid ab vitae et officia animi, dolorem blanditiis earum neque labore recusandae minima facere exercitationem quas optio. Magnam molestiae suscipit debitis facere maiores eos labore odio error laboriosam, asperiores repudiandae ducimus veritatis consectetur corporis! Minus porro at, sapiente quidem inventore odit delectus, quod perspiciatis vero labore laborum numquam quae aspernatur quibusdam atque tenetur deleniti quam! Voluptates quas tempore enim ratione, nisi rerum qui facere nam cum, eius sapiente laboriosam, repellat vitae molestias. Nesciunt dolorem, praesentium sint neque tempore laudantium ipsa, incidunt id animi et odio voluptatem quam perspiciatis velit assumenda voluptatum sit exercitationem autem ut maxime dolorum? Praesentium adipisci, omnis id laudantium distinctio, tempora voluptatibus earum ratione hic accusamus quod vel velit modi reprehenderit voluptatem? Atque neque rem repellendus hic? Atque mollitia odit quia possimus labore quod quisquam repudiandae, nemo, eaque vero obcaecati doloribus maxime harum numquam nobis consectetur quo autem? Dolor, totam id. Natus, unde blanditiis culpa similique adipisci amet quod sapiente esse! Praesentium, amet ad voluptatibus natus odit tenetur autem sed minima voluptas sint optio enim doloribus in, neque quidem alias minus aspernatur facilis omnis. Eius in impedit porro libero numquam illum, suscipit provident deserunt recusandae temporibus! Earum debitis modi exercitationem, explicabo aliquid saepe autem placeat. A nisi velit provident magni ipsam, architecto quasi quam magnam nulla, voluptatem consequuntur quisquam cupiditate quas consectetur sit nobis eos hic adipisci corporis quis dicta dolores laboriosam? Id accusamus, sint illo porro suscipit officiis doloremque excepturi nisi, obcaecati possimus tempora ullam a dolores repellat nobis delectus?</p>
+
+    <div class="relative">
+        <h1>Statinis turinys relityviame elemente</h1>
+        <div class="absolute bottom-right"></div>
+        <div class="absolute custom-position"></div>
+    </div>
+
+    <div class="block">
+        <div class="absolute-block"></div>
+    </div>
+</body>
+</html>
