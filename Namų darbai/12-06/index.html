@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-06 homework</title>
+</head>
+
+<body>
+    <script>
+
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+
+        // Trečia užduotis
+
+        // let metimas = rand(0,1);
+
+        // while (metimas == 1) {
+        //     if (metimas == 0) {
+        //         document.write('Iskrito herbas');
+        //     }
+        //     document.write('Iskirto skaicius');
+        // }
+
+
+        //Ketvirta uzduotis
+
+        const skaiciai = [];
+        let total = 0;
+
+        for(let i = 0; i <= 30; i++) {
+            if (skaiciai[i] > 10) {
+                total++;
+            }
+            skaiciai [i] = rand(5, 25);
+        }
+
+        document.write(skaiciai + ' ');
+
+        document.write('<br /> Is viso reiksmiu didesniu uz 10: ', total);
+       
+    </script>
+</body>
+
+</html>

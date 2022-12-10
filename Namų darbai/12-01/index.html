@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-01 namų darbai</title>
+</head>
+<body>
+    <script>
+
+    function rand(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    //Pirma užduotis
+
+    let first = rand(0, 4);
+    let second = rand(0, 4);
+    let average = '';
+
+
+    if (first > second) {
+        average = first / second;
+        console.log('Atsakymas:', average.toFixed(2))
+    } else if (second > first) {
+        average = second / first;
+        console.log('Atsakymas:', average.toFixed(2))
+    }
+
+
+    console.log ('Atsitiktiniai skaiciai:', first, second);
+
+
+    //Antra užduotis
+
+    let pirmas = rand(0, 25);
+    let antras = rand(0, 25);
+    let trecias = rand(0, 25);
+
+    console.log ('Atsitiktiniai skaičiai:', pirmas, antras, trecias);
+
+    if (antras > pirmas && pirmas > trecias) {
+        console.log('Vidurinis skaičius yra:', pirmas);
+    }
+
+    if (pirmas > antras && antras > trecias) {
+        console.log('Vidurinis skaičius yra:', antras);
+    }
+
+    if (pirmas > trecias && trecias > antras) {
+        console.log('Vidurinis skaičius yra:', trecias);
+    }
+
+
+    </script>
+</body>
+</html>

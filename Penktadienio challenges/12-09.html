@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-09 Friday challenge</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        //Pirma uzduotis
+
+        console.log('Pirmoji uzduotis:')
+
+        let stringas = [];
+        let masyvas1 = [];
+        let raideA = 0;
+        let raideB = 0;
+        let raideC = 0;
+        let raideD = 0;
+
+        for (let i = 0; i < 200; i++){
+            stringas.push(rand(0, 3));
+        }
+        
+        for (let i = 0; i < stringas.length; i++){
+            
+            if (stringas[i] === 0){
+                masyvas1.push('A');
+                raideA++;
+            }
+
+            if (stringas[i] === 1) {
+                masyvas1.push('B');
+                raideB++;
+            }
+
+            if (stringas[i] === 2){
+                masyvas1.push('C');
+                raideC++;
+            }
+
+            if (stringas[i] === 3){
+                masyvas1.push('D');
+                raideD++;
+            }
+        }
+
+        console.log(masyvas1);
+        console.log('Raidziu A:', raideA);
+        console.log('Raidziu B:', raideB);
+        console.log('Raidziu C:', raideC);
+        console.log('Raidziu D:', raideD);
+
+        //Antra uzduotis
+
+        console.log('Antroji uzduotis:')
+
+        console.log(masyvas1.sort());
+
+
+        //Trecia uzduotis
+
+        console.log('Trecioji uzduotis:');
+
+        stringas = 'ABCD';
+        let pirmasMasyvas = [];
+        let antrasMasyvas = [];
+        let treciasMasyvas = [];
+
+        for (let i = 0; i < 200; i++){
+            let raide = stringas[rand(0, stringas.length - 1)];
+            pirmasMasyvas.push(raide);
+
+            raide = stringas[rand(0, stringas.length - 1)];
+            antrasMasyvas.push(raide);
+
+            raide = stringas[rand(0, stringas.length - 1)];
+            treciasMasyvas.push(raide) 
+        }
+
+
+        console.log(pirmasMasyvas);
+        console.log(antrasMasyvas);
+        console.log(treciasMasyvas);
+
+        const masyvas = [];
+        let uniKombinacija = 0;
+        let uniReiksme = 0;
+
+        for (let i = 0; i < pirmasMasyvas.length; i++){
+            masyvas.push(pirmasMasyvas[i] + antrasMasyvas[i] + treciasMasyvas[i]);
+            if (pirmasMasyvas[i] === antrasMasyvas[i] && pirmasMasyvas[i] === treciasMasyvas[i]){
+                uniKombinacija++;
+            }
+
+            if (pirmasMasyvas[i] !== antrasMasyvas[i] && pirmasMasyvas[i] !== treciasMasyvas[i] && antrasMasyvas[i] !== treciasMasyvas[i]){
+                uniReiksme++;
+            }
+        }
+
+        console.log('Naujai sudarytas masyvas sudejus reiksmes pagal indeksa:', masyvas);
+        console.log('Unikaliu reiksmiu yra:', uniReiksme, 'Unikaliu kombinaciju yra:', uniKombinacija);
+
+        // //Ketvirtoji uzduotis
+
+        // console.log('Ketvirtoji uzduotis:')
+
+        let masyvas4 = [];
+        let masyvas42 = [];
+
+        for ( let i = 0; i < 100; i++){
+            let number = rand(100, 999);
+            masyvas4.push(number);
+        }
+
+        for ( let i = 0; i < 100; i++){
+            let number = rand(100, 999);
+            masyvas42.push(number);
+        }
+
+
+        console.log('Pirmas masyvas:', masyvas4);
+        console.log('Antras masyvas:', masyvas42);
+
+    </script>
+</body>
+
+</html>

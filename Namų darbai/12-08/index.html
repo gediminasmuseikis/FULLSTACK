@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-08 Namu darbai</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        //Pirma uzduotis
+
+        let petroTotal = 0;
+        let kazioTotal = 0;
+
+        for(let i = 0; i < 300; i++){
+            const petroTaskai = rand(10, 20);
+            const kazioTaskai = rand(5, 25);
+            document.write('Petras surinko:', petroTaskai + '<br />', 'Kazys surinko:', kazioTaskai + '<br />');
+            
+            petroTotal = petroTaskai + petroTaskai[i];
+            kazioTotal = kazioTaskai + kazioTaskai[i];
+
+            if (kazioTotal >= 222){
+                break;
+                document.write('Pirmas 222 taskus pasieke Kazys');
+            } else if (petroTotal >= 222){
+                break;
+                document.write('Pirmas 222 taskus pasieke Petras');
+            }
+        }
+    </script>
+</body>
+
+</html>
