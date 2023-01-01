@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .head h2 {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .inputs {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .turinys {
+            position: absolute;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 500px;
+            width: 700px;
+            top: 113px;
+            left: 465px;
+        }
+
+        .empty {
+            width: 100%;
+            font-weight: 400;
+            color: red;
+            position: absolute;
+            top: 354px;
+            left: 0;
+
+        }
+
+        .empty {
+            text-align: center;
+        }
+
+        .lent thead {
+            display: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container head">
+            <h2>Prekių krepšelis</h2>
+        </div>
+        <div class="turinys col-12">
+            <div class="container inputs col-12">
+                    <form onsubmit="addItem(event)">
+                    <label>Prekė </label>
+                    <input type="text" class="form-control" name="preke" placeholder="Įveskite prekės pavadinimą" required />
+                    <br />
+                    <label>Kiekis </label>
+                    <input type="number" class="form-control" name="qty" placeholder="Įveskite kiekį" required />
+                    <br />
+                    <button type="submit" class="btn btn-primary">Pridėti</button>
+                </form>
+            </div>
+            <div class="container col-12">
+                <div class="empty"><h6>Jūsų krepšelis tuščias</h6></div>
+                <table class="table col-12 lent">
+                    <thead>
+                        <tr>
+                            <th>Prekė</th>
+                            <th>Kiekis</th>
+                            <th>Veiksmai</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script>
+
+        const data = [];
+
+
+        const showResults = () => {
+            let result = '';
+
+            data.map((product, index) => {
+                result += `
+                    <tr>
+                        <td>${product.name}</td>
+                        <td>${product.qty}</td>
+                        <td>
+                            <button onclick="deleteItem(${index}) "class="btn btn-danger">Ištrinti</button>
+                         </td>
+                    </tr>
+                `;
+            });
+
+            document.querySelector('tbody').innerHTML = result;
+
+
+        }
+
+
+        const deleteItem = (index) => {
+
+            delete data[index];
+
+            document.querySelector('.empty').textContent = 'Jūsų krepšelis tuščias';
+
+            document.querySelector('.lent thead').style.display = 'none';
+
+            showResults();
+        }
+
+
+        const addItem = (event) => {
+            event.preventDefault();
+
+            const product = {
+                name: document.querySelector('[name="preke"]').value,
+                qty: document.querySelector('[name="qty"]').value
+            }
+
+            data[data.length] = product;
+
+
+            document.querySelector('form').reset();
+
+            document.querySelector('.empty').textContent = '';
+
+            document.querySelector('.lent thead').style.display = 'inline-block';
+
+            showResults();
+        }
+
+
+    </script>
+</body>
+
+</html>
